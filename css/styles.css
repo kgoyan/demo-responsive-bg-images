@@ -1,1 +1,23 @@
-/* styles go here */
+/* Start with your smallest screen size (320px) first - serve a scaled-down version of the background image for page loading speeds, and bandwidth.  */
+
+/* The original image is 4460px x 2973px and 950kb. We need to resize to 600px wide and compress the image down to  */
+
+header {
+   padding: 24px;
+   height: 400px;
+   background-color: #eff2f7;
+   background: url(../img/small-bg.jpg) center center / cover no-repeat;
+   /* this is shorthand for background-image, background-position (x & y), background-size (cover for full screens) and background-repeat */
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+/* As the screen gets wider, the background image stretches to fit and the lower sized image does not look good on the screen. We can use our media queries to swap out the background image for a larger, higher quality image.*/
+@media only screen and (min-width: 950px) {
+    header {
+        background: url(../img/bg-medium.jpg) center center / cover no-repeat;
+    }
+}
