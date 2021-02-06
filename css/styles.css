@@ -4,6 +4,7 @@
 
 header {
    padding: 24px;
+   margin-bottom: 24px;
    height: 400px;
    background-color: #eff2f7;
    background: url(../img/small-bg.jpg) center center / cover no-repeat;
@@ -15,9 +16,55 @@ h1 {
     text-align: center;
 }
 
+aside,
+section {
+    padding: 60px 0;
+    color: #fff;
+    text-align: center;
+}
+
+aside:first-of-type {
+    background-color: #73a302;
+}
+
+section {
+    background-color: #334839;
+}
+
+aside:last-of-type{
+    background-color: #315002;
+}
+
 /* As the screen gets wider, the background image stretches to fit and the lower sized image does not look good on the screen. We can use our media queries to swap out the background image for a larger, higher quality image.*/
 @media only screen and (min-width: 950px) {
     header {
+        height: 500px;
         background: url(../img/bg-medium.jpg) center center / cover no-repeat;
     }
+    
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    aside {
+        width: 24%;
+    }
+
+    section {
+        width: 48%;
+    }
+
 }
+
+@media only screen and (min-width: 1500px){
+    header {
+        height: 700px;;
+        background: url(../img/large-bg.jpg) center bottom / cover no-repeat;
+    }
+    .inner-container {
+        width: 1400px;
+        margin: 0 auto;
+    }
+}
+
